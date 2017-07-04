@@ -41,6 +41,12 @@ if (enter == true){
 				alert(listRes)
 				break
 			}
+			case "view": {
+				let numFilm = prompt("Введите номер фильма") - 1
+				let linkFilm = "Чтоб просмотреть фильм \"" + filmBase[numFilm].name + "\" \nскопируйте и вставте ссылку в своем браузере:\n\n" + filmBase[numFilm].link
+				alert(linkFilm)
+				break
+			}
 		}
 	} while (true)
 } else { 
