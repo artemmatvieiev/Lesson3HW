@@ -24,6 +24,17 @@ let filmBase = [
 const enter = confirm("Здравствуйте! Вы хотите войти в нашу базу фильмов?")
 if (enter == true){
 	const userName = prompt("Как вас зовут?")
+	do {
+		const cmd = prompt(userName + " Введите команду\n(если вам нужна помощь введите команду help)")
+
+		if (cmd == "exit") {
+			alert("До свидания! Ждем вас еще.")
+			break
+		}
+		switch (cmd) {
+			
+		}
+	} while (true)
 } else { 
 		alert("До свидания! Ждем вас еще.")
 }
