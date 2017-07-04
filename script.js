@@ -91,6 +91,23 @@ if (enter == true){
 					}
 				break
 			}
+			case "search year": {
+				let film = {}
+				tastYearFilm(film)
+				let searchRes = "Результат поиска:\n"
+				for (let i = 0; i < filmBase.length ; i++) {
+					if (filmBase[i].year == film.year) {
+						searchRes += (i + 1) + ". " + filmBase[i].name + " (" 
+						+ filmBase[i].year + ")" + "\n"
+					}
+				}
+				if (searchRes == "Результат поиска:\n") {
+					alert("Фильм не найден")
+				} else{
+						alert(searchRes)
+					}
+				break
+			}
 		}
 	} while (true)
 } else { 
