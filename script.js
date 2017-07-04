@@ -71,6 +71,9 @@ if (enter == true){
 				alert("Фильм " + film.name + " добавлен в базу")
 				break
 			}
+			case "quantity":
+				alert("Всего фильмов: " + filmBase.length)
+				break
 		}
 	} while (true)
 } else { 
