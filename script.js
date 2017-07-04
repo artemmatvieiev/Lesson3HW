@@ -20,7 +20,22 @@ let filmBase = [
 	  link: "http://kinotochka.club/5144-dedpul-2016.html"
 	}
 ]
-
+function tastNameFilm(film) {
+	film.name = prompt("Введите название фильма")
+	if (film.name != "") return film
+	else {
+		alert("В названии фильма должен содержаться хоть один символ")
+		tastNameFilm(film)
+	}
+}
+function tastYearFilm(film) {
+	film.year = prompt("Введите год выхода фильма")
+	if ((film.year >= 1895)&(film.year.length == 4)) return film
+	else {
+		alert("Вы ввели неправильный год выхода фильма")
+		tastYearFilm(film)
+	}
+}
 const enter = confirm("Здравствуйте! Вы хотите войти в нашу базу фильмов?")
 if (enter == true){
 	const userName = prompt("Как вас зовут?")
@@ -45,6 +60,15 @@ if (enter == true){
 				let numFilm = prompt("Введите номер фильма") - 1
 				let linkFilm = "Чтоб просмотреть фильм \"" + filmBase[numFilm].name + "\" \nскопируйте и вставте ссылку в своем браузере:\n\n" + filmBase[numFilm].link
 				alert(linkFilm)
+				break
+			}
+			case "add": {
+				let film = {}
+				tastNameFilm(film)
+				tastYearFilm(film)
+				film.link = prompt("Введите ссылку на фильм")
+				filmBase.push(film)
+				alert("Фильм " + film.name + " добавлен в базу")
 				break
 			}
 		}
