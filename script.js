@@ -32,7 +32,15 @@ if (enter == true){
 			break
 		}
 		switch (cmd) {
-			
+			case "list": {
+				var listRes = "Список фильмов:\n"
+				for (let i = 0; i < filmBase.length ; i++) {
+					listRes += (i + 1) + ". " + filmBase[i].name + " (" 
+					+ filmBase[i].year + ")" + "\n"
+				}
+				alert(listRes)
+				break
+			}
 		}
 	} while (true)
 } else { 
