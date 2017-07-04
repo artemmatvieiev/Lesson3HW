@@ -74,6 +74,23 @@ if (enter == true){
 			case "quantity":
 				alert("Всего фильмов: " + filmBase.length)
 				break
+			case "search name": {
+				let film = {}
+				tastNameFilm(film)
+				let searchRes = "Результат поиска:\n"
+				for (let i = 0; i < filmBase.length ; i++) {
+					if (filmBase[i].name == film.name) {
+						searchRes += (i + 1) + ". " + filmBase[i].name + " (" 
+						+ filmBase[i].year + ")" + "\n"
+					}
+				}
+				if (searchRes == "Результат поиска:\n") {
+					alert("Фильм не найден")
+				} else{
+						alert(searchRes)
+					}
+				break
+			}
 		}
 	} while (true)
 } else { 
