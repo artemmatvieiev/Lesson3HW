@@ -108,6 +108,19 @@ if (enter == true){
 					}
 				break
 			}
+			case "help": {
+				alert(`list - список всех фильмов\n 
+view - просмотр ссылки фильма по номеру из списка фильмов\n
+add - добавление фильма в базу\n
+quantity - количество фильмов в базе\n
+search name - поиск фильма по названию\n
+search year - поиск фильма по году\n
+exit - выход\n`)
+				break
+			}
+			default:
+				alert("Комманда " + cmd + " не найдена")
+				break
 		}
 	} while (true)
 } else { 
